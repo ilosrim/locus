@@ -90,7 +90,7 @@ export const Header = styled.div`
 export const HeadInfo = styled.div`
   width: 50%;
 `;
-HeadInfo.Title = styled.div`
+export const Title = styled.div`
   font-family: sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -98,7 +98,7 @@ HeadInfo.Title = styled.div`
   line-height: 70px;
   color: #1C2323;
 `;
-HeadInfo.Desc = styled.div`
+export const Desc = styled.div`
   font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
