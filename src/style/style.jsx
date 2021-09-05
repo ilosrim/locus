@@ -3,6 +3,8 @@ import { ReactComponent as Logo } from "../images/logo.svg";
 import { ReactComponent as Locus } from "../images/locus.svg";
 import { ReactComponent as H } from "../images/h.svg";
 import Bg from "../images/header-bg-2.png";
+import WorkBg from '../images/works-bg.png';
+import Play from '../images/play.png';
 
 // main content
 export const Wrapper = styled.div`
@@ -47,6 +49,9 @@ export const Link = styled.a`
   line-height: 27px;
   color: #404242;
   position: relative;
+  cursor: pointer;
+  margin-right: ${({mr})=> mr && 'auto'};
+  margin-top: ${({mt})=> mt && '20px'};
   ::after {
     content: "";
     width: 70%;
@@ -69,7 +74,7 @@ export const Link = styled.a`
 export const Button = styled.button`
   padding: 8px 60px;
   background: #58a9a5;
-  border-radius: ${({border})=> border ? '15px' : '15px 15px 15px 0'};
+  border-radius: ${({ border }) => (border ? "15px" : "15px 15px 15px 0")};
   font-family: sans-serif;
   font-weight: 500;
   font-size: 25px;
@@ -96,7 +101,8 @@ export const Title = styled.div`
   font-weight: 800;
   font-size: 65px;
   line-height: 70px;
-  color: #1C2323;
+  color: #1c2323;
+  text-align: ${({ center }) => center && "center"};
 `;
 export const Desc = styled.div`
   font-family: sans-serif;
@@ -106,10 +112,11 @@ export const Desc = styled.div`
   line-height: 30px;
   color: #404242;
   margin: 20px 0;
+  text-align: ${({ center }) => center && "center"};
 `;
 HeadInfo.Button = styled.button`
   padding: 8px 37px;
-  background: #58A9A5;
+  background: #58a9a5;
   border-radius: 20px 20px 20px 0px;
   border: none;
   outline: none;
@@ -118,7 +125,7 @@ HeadInfo.Button = styled.button`
   font-weight: 500;
   font-size: 25px;
   line-height: 37px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
 `;
 
@@ -134,5 +141,57 @@ export const HeadBg = styled.div`
   background-repeat: no-repeat;
 `;
 export const HeadBgImage = styled(H)`
-width: 80%;
+  width: 80%;
 `;
+
+// works section
+export const Work = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 105px;
+`;
+Work.Container = styled.div`
+  width: 100%;
+  display: flex;
+`
+Work.Bg = styled.div`
+  width: 70%;
+  height: 250px;
+  background-image: url(${WorkBg});
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px 0 0 8px;
+`
+Work.Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #CCF0E6;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 70px 73px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #486958;
+  position: relative;
+`
+Work.Play = styled.div`
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -9%;
+  bottom: 22%;
+  border: 8px solid rgba(255, 255, 255, 0.4);
+  background-image: url(${Play});
+  background-position: center;
+  background-repeat: no-repeat;
+`
