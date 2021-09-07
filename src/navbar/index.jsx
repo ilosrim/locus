@@ -1,9 +1,9 @@
 import React from 'react'
-import { Nav, Wrapper, Button, Link } from '../style/style'
+import { Nav, Container, Button, Link } from '../style/style'
 
 export const Navbar = () => {
   return (
-    <Wrapper>
+    <Container>
       <Nav>
         <Nav.NavBrand>
           <Nav.NavBrandLink href='#'>
@@ -35,6 +35,6 @@ export const Navbar = () => {
         </Nav.NavItems>
         <Button border>Log In</Button>
       </Nav>
-    </Wrapper>
+    </Container>
   )
 }

@@ -3,11 +3,54 @@ import { ReactComponent as Logo } from "../images/logo.svg";
 import { ReactComponent as Locus } from "../images/locus.svg";
 import { ReactComponent as H } from "../images/h.svg";
 import Bg from "../images/header-bg-2.png";
-import WorkBg from '../images/works-bg.png';
-import Play from '../images/play.png';
+import WorkBg from "../images/works-bg.png";
+// import Play from '../images/play.png';
+
+export const Button = styled.button`
+  padding: 8px 60px;
+  background: #58a9a5;
+  border-radius: ${({ border }) => (border ? "15px" : "15px 15px 15px 0")};
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 37px;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+`;
+
+export const Link = styled.a`
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 22px;
+  line-height: 27px;
+  color: #404242;
+  position: relative;
+  cursor: pointer;
+  margin-right: ${({ mr }) => mr && "auto"};
+  margin-top: ${({ mt }) => mt && "20px"};
+  ::after {
+    content: "";
+    width: 70%;
+    height: 0;
+    background-color: #fec62d;
+    position: absolute;
+    bottom: -4px;
+    left: 15%;
+    border-radius: 15px;
+    transition: all 0.3s linear;
+  }
+  :hover {
+    color: #58a9a5;
+    ::after {
+      height: 4px;
+    }
+  }
+`;
 
 // main content
-export const Wrapper = styled.div`
+export const Container = styled.div`
   width: 1200px;
   margin: 0 auto;
 `;
@@ -42,48 +85,7 @@ Nav.NavLinks = styled.li`
   list-style: none;
   margin-right: 25px;
 `;
-export const Link = styled.a`
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 22px;
-  line-height: 27px;
-  color: #404242;
-  position: relative;
-  cursor: pointer;
-  margin-right: ${({mr})=> mr && 'auto'};
-  margin-top: ${({mt})=> mt && '20px'};
-  ::after {
-    content: "";
-    width: 70%;
-    height: 0;
-    background-color: #fec62d;
-    position: absolute;
-    bottom: -4px;
-    left: 15%;
-    border-radius: 15px;
-    transition: all 0.3s linear;
-  }
-  :hover {
-    color: #58a9a5;
-    ::after {
-      height: 4px;
-    }
-  }
-`;
 // navbar button
-export const Button = styled.button`
-  padding: 8px 60px;
-  background: #58a9a5;
-  border-radius: ${({ border }) => (border ? "15px" : "15px 15px 15px 0")};
-  font-family: sans-serif;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 37px;
-  color: #ffffff;
-  cursor: pointer;
-  border: none;
-  outline: none;
-`;
 
 // header section
 export const Header = styled.div`
@@ -91,6 +93,7 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 100px;
 `;
 export const HeadInfo = styled.div`
   width: 50%;
@@ -114,20 +117,6 @@ export const Desc = styled.div`
   margin: 20px 0;
   text-align: ${({ center }) => center && "center"};
 `;
-HeadInfo.Button = styled.button`
-  padding: 8px 37px;
-  background: #58a9a5;
-  border-radius: 20px 20px 20px 0px;
-  border: none;
-  outline: none;
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 37px;
-  color: #ffffff;
-  cursor: pointer;
-`;
 
 export const HeadBg = styled.div`
   width: 50%;
@@ -146,52 +135,43 @@ export const HeadBgImage = styled(H)`
 
 // works section
 export const Work = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   margin-top: 105px;
 `;
-Work.Container = styled.div`
+Work.Head = styled.div`
   width: 100%;
   display: flex;
-`
+`;
 Work.Bg = styled.div`
+  height: 300px;
   width: 70%;
-  height: 250px;
   background-image: url(${WorkBg});
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 8px 0 0 8px;
-`
+`;
 Work.Text = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 30%;
-  background-color: #CCF0E6;
   border-radius: 0 8px 8px 0;
+  padding: 50px 90px 70px;
+  box-sizing: border-box;
+  background-color: #ccf0e6;
+`;
+Work.Footer = styled.div`
+  display: flex;
+`;
+Work.FooterBg = styled.div`
+  width: 50%;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 70px 73px;
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  color: #486958;
-  position: relative;
-`
-Work.Play = styled.div`
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: #fff;
-  position: absolute;
-  left: -9%;
-  bottom: 22%;
-  border: 8px solid rgba(255, 255, 255, 0.4);
-  background-image: url(${Play});
-  background-position: center;
-  background-repeat: no-repeat;
+`;
+Work.FooterBgImage = styled.img`
+  width: 100%;
+`;
+Work.FooterText = styled.div`
+  width: 50%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
 `

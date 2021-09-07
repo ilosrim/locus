@@ -1,9 +1,9 @@
 import React from 'react'
-import { Wrapper, Header, HeadInfo, HeadBg, HeadBgImage, Title, Desc } from '../style/style'
+import { Container, Button, Header, HeadInfo, HeadBg, HeadBgImage, Title, Desc } from '../style/style'
 
 export const Head = () => {
   return (
-    <Wrapper>
+    <Container>
       <Header>
         <HeadInfo>
           <Title>
@@ -17,14 +17,14 @@ export const Head = () => {
             a residentical design with an extraordinary touch
             of art.
           </Desc>
-          <HeadInfo.Button>
+          <Button>
             Let's go
-          </HeadInfo.Button>
+          </Button>
         </HeadInfo>
         <HeadBg>
           <HeadBgImage />
         </HeadBg>
       </Header>
-    </Wrapper>
+    </Container>
   )
 }
