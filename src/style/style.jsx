@@ -5,9 +5,9 @@ import { ReactComponent as H } from "../images/h.svg";
 import Bg from "../images/header-bg-2.png";
 import WorkBg from "../images/works-bg.png";
 // import Play from '../images/play.png';
-import Pro1 from '../images/pro1.png';
-import Pro2 from '../images/pro2.png';
-import Pro3 from '../images/pro3.png';
+import Pro1 from "../images/pro1.png";
+import Pro2 from "../images/pro2.png";
+import Pro3 from "../images/pro3.png";
 
 export const Button = styled.button`
   padding: 8px 60px;
@@ -225,6 +225,7 @@ export const Projects = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 150px;
 `;
 Projects.Contents = styled.div`
   width: 100%;
@@ -235,7 +236,7 @@ Projects.Contents = styled.div`
 Projects.Content = styled.div`
   width: 350px;
   height: 600px;
-`
+`;
 Projects.Title = styled.div`
   font-family: sans-serif;
   font-style: normal;
@@ -253,15 +254,80 @@ Projects.Text = styled.div`
   color: #486958;
 `;
 
-Projects.Bg =styled.div`
+Projects.Bg = styled.div`
   width: 350px;
   height: 350px;
-  background-image: ${
-    (props) =>
-      props.one ? `url(${Pro1})`  :
-      props.two ? `url(${Pro2})`  :
-      props.three && `url(${Pro3})`
-  };
+  background-image: ${(props) =>
+    props.one
+      ? `url(${Pro1})`
+      : props.two
+      ? `url(${Pro2})`
+      : props.three && `url(${Pro3})`};
   background-size: cover;
   margin-top: 25px;
-`
+`;
+
+// testimonal section
+export const Testimonals = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`;
+export const TestInfo = styled.div`
+  width: 100%;
+  display: flex;
+  margin: 100px 0;
+`;
+TestInfo.Bg = styled.div`
+  width: 35%;
+  height: 500px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+TestInfo.Text = styled.div`
+  width: 65%;
+  background-color: #ccf0e6;
+  box-sizing: border-box;
+`;
+TestInfo.Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px;
+`;
+TestInfo.TopInfo = styled.div`
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 105px;
+  color: #58a9a5;
+  h3 {
+    font-size: 70px;
+    margin: 0;
+  }
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+`;
+TestInfo.Bottom = styled.div`
+  padding: 0 80px;
+  h4,
+  p {
+    margin: 0;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #000;
+  }
+  p{
+    color: #486958;
+    font-style: italic;
+    margin-top: 15px;
+  }
+`;

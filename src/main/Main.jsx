@@ -3,6 +3,7 @@ import { Navbar } from '../navbar'
 import { Head } from '../header'
 import { Works } from '../works'
 import { Project } from '../project'
+import { Testimonal } from '../testimonal'
 
 export const Main = () => {
   return (
@@ -11,6 +12,7 @@ export const Main = () => {
       <Head />
       <Works />
       <Project />
+      <Testimonal />
     </>
   )
 }
