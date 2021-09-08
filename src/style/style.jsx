@@ -256,6 +256,16 @@ Projects.Text = styled.div`
   color: #486958;
 `;
 
+// const getBg = (type)=>{
+//   switch (type) {
+//     case 'one': return Pro1;
+//     case 'two': return Pro2;
+//     case 'three': return Pro3;
+//     default:
+//       return `undefined`
+//   }
+// }
+
 Projects.Bg = styled.div`
   width: 350px;
   height: 350px;
