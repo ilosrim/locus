@@ -4,6 +4,7 @@ import { Head } from '../header'
 import { Works } from '../works'
 import { Project } from '../project'
 import { Testimonal } from '../testimonal'
+import { Contact } from '../contact'
 
 export const Main = () => {
   return (
@@ -13,6 +14,7 @@ export const Main = () => {
       <Works />
       <Project />
       <Testimonal />
+      <Contact />
     </>
   )
 }

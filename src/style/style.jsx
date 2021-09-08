@@ -21,6 +21,7 @@ export const Button = styled.button`
   cursor: pointer;
   border: none;
   outline: none;
+  margin-right: ${({ ml }) => ml && "auto"};
 `;
 
 export const Link = styled.a`
@@ -56,6 +57,7 @@ export const Link = styled.a`
 export const Container = styled.div`
   width: 1200px;
   margin: 0 auto;
+  display: ${({ flex }) => (flex ? "flex" : "block")};
 `;
 
 // navbar section //
@@ -325,9 +327,37 @@ TestInfo.Bottom = styled.div`
     line-height: 37px;
     color: #000;
   }
-  p{
+  p {
     color: #486958;
     font-style: italic;
     margin-top: 15px;
+  }
+`;
+
+// contact section
+export const LeftSec = styled.div`
+  width: 35%;
+  margin-bottom: 100px;
+`;
+export const RightSec = styled.div`
+  width: 65%;
+  height: 400px;
+  border: 1px solid #486958;
+  padding: 40px;
+  margin-bottom: 100px;
+  input,
+  textarea {
+    width: 99%;
+    border: none;
+    outline: none;
+    padding: 25px 15px;
+    ::placeholder {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 37px;
+      color: #486958;
+    }
   }
 `;
