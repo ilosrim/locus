@@ -5,6 +5,9 @@ import { ReactComponent as H } from "../images/h.svg";
 import Bg from "../images/header-bg-2.png";
 import WorkBg from "../images/works-bg.png";
 // import Play from '../images/play.png';
+import Pro1 from '../images/pro1.png';
+import Pro2 from '../images/pro2.png';
+import Pro3 from '../images/pro3.png';
 
 export const Button = styled.button`
   padding: 8px 60px;
@@ -207,3 +210,58 @@ Work.FooterTxt = styled.div`
   }
 `;
 
+// project section
+export const TwoLine = styled.div`
+  width: 100px;
+  height: 15px;
+  border-top: 5px solid #58a9a5;
+  border-bottom: 5px solid #58a9a5;
+  text-align: center;
+  margin: 50px 0 90px;
+`;
+export const Projects = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+Projects.Contents = styled.div`
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+`;
+Projects.Content = styled.div`
+  width: 350px;
+  height: 600px;
+`
+Projects.Title = styled.div`
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 60px;
+  color: #58a9a5;
+`;
+Projects.Text = styled.div`
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #486958;
+`;
+
+Projects.Bg =styled.div`
+  width: 350px;
+  height: 350px;
+  background-image: ${
+    (props) =>
+      props.one ? `url(${Pro1})`  :
+      props.two ? `url(${Pro2})`  :
+      props.three && `url(${Pro3})`
+  };
+  background-size: cover;
+  margin-top: 25px;
+`
