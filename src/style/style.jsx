@@ -351,8 +351,14 @@ export const RightSec = styled.div`
     border: none;
     outline: none;
     padding: 25px 15px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+    color: #486958;
     ::placeholder {
-      font-family: Poppins;
+      font-family: sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 25px;

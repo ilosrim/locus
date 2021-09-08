@@ -12,7 +12,7 @@ export const Contact = () => {
       <RightSec>
         <input type="text" placeholder='Full name'/>
         <input type="text" placeholder='Email address'/>
-        <textarea placeholder='Description' cols="30" rows="10"></textarea>
+        <textarea placeholder='Description' cols="30" rows="2"></textarea>
         <Button ml>Send now</Button>
       </RightSec>
     </Container>
