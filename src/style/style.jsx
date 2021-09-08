@@ -135,7 +135,7 @@ export const HeadBgImage = styled(H)`
 
 // works section
 export const Work = styled.div`
-  margin-top: 105px;
+  margin: 100px 0;
 `;
 Work.Head = styled.div`
   width: 100%;
@@ -152,12 +152,21 @@ Work.Bg = styled.div`
 Work.Text = styled.div`
   width: 30%;
   border-radius: 0 8px 8px 0;
-  padding: 50px 90px 70px;
+  padding: 50px 40px 70px;
   box-sizing: border-box;
   background-color: #ccf0e6;
+  p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #486958;
+  }
 `;
 Work.Footer = styled.div`
   display: flex;
+  margin-top: 100px;
 `;
 Work.FooterBg = styled.div`
   width: 50%;
@@ -168,10 +177,33 @@ Work.FooterBg = styled.div`
 `;
 Work.FooterBgImage = styled.img`
   width: 100%;
+  height: 100%;
 `;
 Work.FooterText = styled.div`
   width: 50%;
   height: 500px;
   display: flex;
   flex-direction: column;
-`
+`;
+Work.FooterTxt = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 55px 30px;
+  h1 {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    color: #1c2323;
+  }
+  p {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    color: #486958;
+  }
+`;
+

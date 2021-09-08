@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Desc, Link, Title, Work } from "../style/style";
-import WorkImg from '../images/work-img.png'
+import WorkImg from "../images/work-img.png";
 
 export const Works = () => {
   return (
@@ -24,7 +24,14 @@ export const Works = () => {
             <Work.FooterBgImage src={WorkImg} />
           </Work.FooterBg>
           <Work.FooterText>
-            
+            <Work.FooterTxt>
+              <h1>Our mission is to deliver aesthetic visual for your home</h1>
+              <p>
+                By applying bacis psychology principles, we are going to explain
+                how perception works and how we can use this understanding to
+                maximise the space that we occupy in our homes.
+              </p>
+            </Work.FooterTxt>
           </Work.FooterText>
         </Work.Footer>
       </Work>
